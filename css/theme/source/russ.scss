@@ -1,0 +1,62 @@
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+
+
+// Include theme-specific fonts
+@import url(https://fonts.googleapis.com/css?family=Quicksand:400,700,400italic,700italic);
+@import url(http://fonts.googleapis.com/css?family=Arimo:400,600);
+
+
+// Override theme settings (see ../template/settings.scss)
+$mainFont: 'Open Sans', sans-serif;
+$mainColor: #e0d4af;
+$headingFont: 'Arimo', sans-serif;
+$headingColor: #eee;
+$headingMargin: 0px 0px 1em 0px;
+$headingTextShadow: none;
+$headingTextTransform: none;
+$backgroundColor: #173d45;
+$linkColor: #c6e5ec;
+$linkColorHover: lighten( $linkColor, 20% );
+$selectionBackgroundColor: #134674;
+
+// Fix links so they are not cut off
+.reveal a:not(.image) {
+	line-height: 1.3em;
+}
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
+
+.reveal h1 {
+  margin: 0px;
+  line-height:1.2em;
+}
+
+.reveal h1, .reveal h2 {
+  font-weight: 600;
+}
+
+.reveal pre {
+  padding: 5px;
+  margin-bottom:1em;
+  color: rgb(220, 220, 220);
+  font-size:70%;
+}
+
+.reveal pre code {
+  max-height: 600px;
+}
+
+.reveal pre, .reveal pre code {
+  background: #3F3F3F;
+  font-family: Inconsolata, monospace;
+}
+
+.reveal pre code {
+  padding: 0px;
+}

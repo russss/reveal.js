@@ -1,0 +1,65 @@
+/**
+ * Default theme for reveal.js.
+ *
+ * Copyright (C) 2011-2012 Hakim El Hattab, http://hakim.se
+ */
+
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+
+$backgroundColor: rgba(0,0,0, 1);
+
+$mainFont: 'Titillium Web';
+$headingFont: 'Titillium Web';
+$headingTextTransform: none;
+
+@font-face {
+  font-family: 'Titillium Web';
+  src: url('../../lib/font/TitilliumWeb-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Titillium Web';
+  src: url('../../lib/font/TitilliumWeb-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+// Background generator
+@mixin bodyBackground() {
+	@include radial-gradient( rgba(0,161,228,0.9), rgba(0,161,228,1) );
+}
+
+
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
+
+.title-slide h1 {
+  font-size:2.4em;
+  font-weight:bold;
+}
+
+ul.credits {
+  font-size: 0.8em;
+}
+
+section.shadow {
+  background-color: rgba(0,0,0,0.8);
+  border-radius: 0.25em;
+}
+
+.reveal .state-background {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: none;
+}
